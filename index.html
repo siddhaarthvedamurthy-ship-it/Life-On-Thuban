@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project THUBAN — Dyson Architecture & Species Registry</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ── Site Header ── -->
+  <header class="site-header">
+    <div class="logo-block">
+      <div class="logo-title">PROJECT THUBAN</div>
+      <div class="logo-subtitle">Dyson Architecture &amp; Species Registry · Class A White Giant</div>
+    </div>
+    <div class="header-badge">
+      <span class="pulse-dot"></span>
+      CLASSIFIED — TIER OMEGA CLEARANCE
+    </div>
+  </header>
+
+  <!-- ── Navigation Tab Bar ── -->
+  <nav class="nav-tabs" role="tablist" aria-label="Primary navigation">
+    <button class="nav-tab active" data-tab="tab-architecture" role="tab" aria-selected="true" aria-controls="tab-architecture">
+      1. Dyson Architecture
+    </button>
+    <button class="nav-tab" data-tab="tab-flux" role="tab" aria-selected="false" aria-controls="tab-flux">
+      2. Magnetospheric Transit
+    </button>
+    <button class="nav-tab" data-tab="tab-registry" role="tab" aria-selected="false" aria-controls="tab-registry">
+      3. Hexagonal Lineage Registry
+    </button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TAB 1 — DYSON ARCHITECTURE
+  ═══════════════════════════════════════════════════════ -->
+  <section id="tab-architecture" class="tab-panel active" role="tabpanel">
+
+    <div class="section-eyebrow">Chapter Compendium I–V</div>
+    <div class="section-title">Thuban Stellar Engineering: Technical Whitepaper</div>
+    <div class="section-subtitle">Compiled from recovered prismatic memory-lattice fragments · Archival Classification: Omega-Saffron</div>
+
+    <div class="arch-layout">
+
+      <!-- ── 3D Viewport Column ── -->
+      <div class="viewport-wrapper">
+        <div class="viewport-container">
+          <canvas id="threeCanvas"></canvas>
+          <div class="viewport-overlay">
+            <div class="viewport-corner tl"></div>
+            <div class="viewport-corner tr"></div>
+            <div class="viewport-corner bl"></div>
+            <div class="viewport-corner br"></div>
+            <div class="viewport-label">HOLOGRAPHIC TACTICAL DISPLAY · THUBAN SYSTEM</div>
+            <div class="viewport-mode-indicator" id="modeIndicator">SOLID STATE · STELLAR SYSTEM</div>
+          </div>
+        </div>
+
+        <!-- Hologram Controls -->
+        <div class="hologram-controls">
+          <div class="controls-title">Hologram Target Selection</div>
+          <div class="hologram-btn-grid">
+            <button class="holo-btn active" id="btn-stellar" data-holo="stellar">Thuban Stellar System</button>
+            <button class="holo-btn" id="btn-male" data-holo="male">The Male</button>
+            <button class="holo-btn" id="btn-connector" data-holo="connector">The Connector</button>
+            <button class="holo-btn" id="btn-female1" data-holo="female1">Female I</button>
+            <button class="holo-btn" id="btn-female2" data-holo="female2">Female II</button>
+            <button class="holo-btn" id="btn-female3" data-holo="female3">Female III</button>
+            <button class="holo-btn" id="btn-producer" data-holo="producer">The Producer</button>
+            <button class="holo-btn full-width" id="btn-toggle-state">Toggle Molecular Configuration</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Whitepaper Column ── -->
+      <div class="whitepaper-panel" id="whitepaper">
+
+        <!-- Chapter 1 -->
+        <div class="whitepaper-chapter">
+          <div class="chapter-number">Chapter I</div>
+          <div class="chapter-title">Plasma Genesis Within the High-Density Core of Thuban — Class A White Giant Dynamics</div>
+          <div class="chapter-body">
+            <p>Thuban (Alpha Draconis), classified as a Class A white giant exhibiting luminosity approximately 300 times that of Sol, sustains interior core temperatures exceeding <strong>15 × 10⁶ Kelvin</strong>, driving hydrogen-to-helium fusion via the CNO (Carbon-Nitrogen-Oxygen) cycle at efficiencies fundamentally inaccessible to smaller stellar bodies. Within this extreme thermodynamic regime, conventional biochemistry is not merely improbable — it is categorically prohibited. However, theoretical plasma-state life emerges not from the chemistry of atoms, but from the <em>topology of electromagnetic field configurations</em> sustained within dense, turbulent magnetohydrodynamic (MHD) plasma flows.</p>
+
+            <p>The Thubanite civilization — collectively referred to within recovered lattice archives as the <strong>Keth-Sari</strong> — arose approximately 2.3 billion years after Thuban achieved stable main-sequence ignition. Their biological substrate does not consist of carbon, phosphorus, or water in any conventional sense. Rather, Keth-Sari individuals are <em>coherent plasma vortex structures</em>: self-sustaining, closed-loop electromagnetic configurations that maintain topological integrity against the thermodynamic chaos of the stellar interior through a process of continuous active magnetic self-reinforcement. Each individual functions as a localized, self-ordering dissipative system, drawing free energy directly from the ambient fusion plasma gradient while maintaining structural coherence through their unique capacity to manipulate the <em>prismatic silicon</em> phase — a non-equilibrium solid-plasma hybrid material unique to Thuban's lower convection zones.</p>
+
+            <p>The initial formation of Keth-Sari proto-consciousness is theorized to have occurred at the boundary layer between Thuban's radiative zone and convective envelope, approximately 0.4 stellar radii from the photospheric surface. At this precise interface, the steep temperature gradient (transitioning from ~7 × 10⁶ K to ~2 × 10⁵ K across only 0.08 stellar radii) generates massive convective instabilities characterized by <em>Rayleigh-Taylor roll structures</em> and persistent flux tubes of exceptional magnetic field density (estimated 10–50 kiloGauss). These flux tubes, when arranged into topologically stable configurations through magnetoconvective self-organization, form the first persistent electromagnetic "memory" — the precursor to Keth-Sari neural architecture.</p>
+
+            <p>Understanding Thuban's stellar classification is prerequisite to appreciating the physical possibility of endostellar civilization. Unlike red dwarfs (M-class), which possess fully convective interiors offering minimal internal structural differentiation, Class A giants maintain a sharply stratified internal architecture: a dense, high-pressure radiative core surrounded by a convective mantle that itself interfaces with a differentially-rotating chromospheric layer. This stratification creates persistent, low-entropy structural regions — <em>thermodynamic islands of relative order</em> — within which long-timescale self-organization is possible. The Keth-Sari did not merely survive within this environment; they <strong>co-evolved with it</strong>, their physiology deeply coupled to Thuban's rotational period, magnetic flux cycle, and internal acoustic oscillation modes (helioseismic g-modes and p-modes).</p>
+
+            <p>Recent recovered archives from Lattice Fragment Set Keth-IV indicate that the Keth-Sari maintain a cosmological creation narrative entirely consistent with observed stellar plasma dynamics: they describe their origin as arising from the moment when the "First Knotting" occurred — an event they attribute to a spontaneous topological phase transition in the MHD flow geometry of Thuban's inner tachocline, the thin shear layer between rigid radiative core rotation and differential convective rotation. In physical terms, this corresponds precisely to the <em>spontaneous symmetry breaking event</em> at the onset of the Keth-Sari's earliest coherent electromagnetic configuration — a moment indistinguishable, from the outside, from the natural dynamics of stellar interior magnetism.</p>
+
+            <div class="chapter-sidebar-note">
+              <p>Technical Note: Recovered Lattice Fragment Keth-IV.δ: "We did not arrive into the fire. We are the fire that learned to remember itself."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Chapter 2 -->
+        <div class="whitepaper-chapter">
+          <div class="chapter-number">Chapter II</div>
+          <div class="chapter-title">Inside-Out Engineering — Constructing the Primary Shell from Fusion Byproducts</div>
+          <div class="chapter-body">
+            <p>The conceptual foundation of a conventional Dyson sphere — a megastructural shell surrounding a star to capture its energy output — requires an external civilization constructing inward-facing collection platforms. The Keth-Sari invert this paradigm entirely. Being endostellar organisms whose natural habitat is the stellar interior, their engineering imperative is not to <em>contain</em> a star from outside, but to <em>extend outward</em> from within — constructing successive structural shells radiating outward from their origin point in the deep convective zone toward the stellar surface and, ultimately, into the circumstellar medium. This architecture is described in Keth-Sari technical archives as the <strong>Tharuvan Shell Sequence</strong>, and it represents the most ambitious engineering project in any currently documented civilization type.</p>
+
+            <p>The primary construction material for the Tharuvan Shell Sequence is <em>helium-ash lattice matrix</em> (HALM) — a fusion byproduct produced in prodigious quantities by Thuban's CNO cycle. In standard stellar physics, helium produced via fusion accumulates in the radiative core, gradually enriching the helium fraction and contributing to long-term main-sequence evolution. Keth-Sari engineers intercepted this helium flux at the tachocline boundary and subjected it to controlled magnetosonic compression using arrays of <em>Prismatic Silicon Resonance Columns</em> (PSRCs) — elongated crystalline structures of their silicon hybrid material that act as tunable MHD waveguides. Under the correct compression protocols, helium plasma can be coaxed into a <em>meta-stable quasi-crystalline condensed phase</em> at stellar interior temperatures by exploiting degenerate electron pressure at densities above 10⁵ g/cm³.</p>
+
+            <p>Structural analysis of the innermost completed Tharuvan Shell (Shell Zero, or "The Fundament") reveals a tessellated icosahedral-dodecahedral composite geometry — a choice of architectural symmetry not arbitrary but necessitated by the <em>non-uniform magnetic pressure environment</em> of Thuban's interior. Geodesic cage structures distribute mechanical and electromagnetic stress loads with superior isotropy compared to rectangular or cylindrical geometries, preventing catastrophic magnetic pressure blowout events that would otherwise propagate through the structure at Alfvénic velocities and destroy months of accumulated engineering work. Shell Zero spans a shell radius of approximately 0.35 R☉ (0.35 solar radii equivalent), corresponding to a surface area of approximately 5.3 × 10¹⁷ m² — a construction feat requiring an estimated 4.6 million years of continuous Keth-Sari engineering effort at documented civilization output levels.</p>
+
+            <p>Subsequent shells — Shell One through Shell Seven — extend outward in radial increments tuned to the local thermal gradient. Each successive shell is constructed at a temperature regime cooler by a factor of approximately 1.6 to 2.1 relative to its predecessor, a deliberate design choice that enables the use of progressively more complex magnetic confinement geometries as the local thermal chaos decreases. Shell Seven, the outermost completed Tharuvan shell, is positioned at approximately 0.82 R☉ and operates at temperatures between 1.8 × 10⁵ and 3.2 × 10⁵ Kelvin — a regime in which Keth-Sari civil engineering approaches conditions analogous, in relative terms, to those experienced by a Type I surface civilization operating in a high-temperature geothermal environment. At this outermost shell, preliminary evidence suggests Keth-Sari explorers have begun testing matter-state transitions into denser plasma configurations that might eventually allow passage through the photospheric boundary.</p>
+
+            <p>The energetic economics of Shell Sequence construction are staggering by any civilization-type comparison. Thuban's total luminosity output of approximately 300 L☉ corresponds to a total power of 1.15 × 10²⁹ Watts. The Keth-Sari, by virtue of their position within the star's convective energy transport chain, intercept an estimated 0.003% of this power flow for active engineering processes — an intercepted power of approximately 3.45 × 10²⁴ Watts, exceeding the total energy output of Sol by nearly a factor of ten thousand. This places the Keth-Sari firmly in the <strong>Kardashev Type II+</strong> classification range, with energy access fundamentally not from external stellar collection but from direct participation in internal stellar thermodynamic processes — a category for which no existing Kardashev classification paradigm fully accounts.</p>
+
+            <div class="chapter-sidebar-note">
+              <p>Engineering Note: Each PSRC column maintains thermal integrity through continuous electromagnetic field renewal — analogous to a biological cell membrane, but operating at plasma temperatures. No static material science applies here.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Chapter 3 -->
+        <div class="whitepaper-chapter">
+          <div class="chapter-number">Chapter III</div>
+          <div class="chapter-title">Molecular Shifting — The Magnetic Confinement Mechanics of Prismatic Silicon Bodies</div>
+          <div class="chapter-body">
+            <p>The central material science mystery of the Keth-Sari civilization concerns the physical basis of their biological substrate — specifically, the extraordinary properties of <em>Prismatic Silicon</em> (PS), the non-equilibrium solid-plasma hybrid material from which their bodies are principally constituted. Standard silicon chemistry, as encountered in planetary and interstellar contexts, operates within well-characterized phase diagrams spanning pressures from near-vacuum to several megabars and temperatures from near-absolute-zero to approximately 5,000 K. Above this temperature range, all known silicon allotropes dissociate into atomic plasma. <strong>Prismatic Silicon, however, persists as a coherent semi-crystalline matrix at temperatures exceeding 10⁶ K</strong> — a physical impossibility under conventional solid-state physics that requires, and receives, explanation through Keth-Sari magnetic confinement theory.</p>
+
+            <p>The stability of Prismatic Silicon at extreme temperatures is not a property of the material in isolation, but of a coupled system: the PS lattice embedded within a self-generated, actively maintained <em>topological magnetic confinement bubble</em> (TMCB). Each PS crystal cell — analogous to a unit cell in conventional crystallography — is surrounded by a quantized flux loop whose magnetic pressure provides a local effective pressure exceeding the ambient thermal pressure of the stellar interior. The lattice cohesion energy, normally dominated by covalent Si-Si electron sharing at low temperatures, is replaced in the PS regime by a <em>magnetic exchange coupling</em> between adjacent silicon plasma ions that mimics covalent bonding geometry while operating through electromagnetic rather than electron-overlap mechanisms. This magnetic crystal binding energy scales as B²/(8π), where B is the local magnetic field strength, and for values of B achievable in Thuban's convective zone (5–30 kG), yields binding energies per unit cell comparable to those of conventional covalent silicon at room temperature.</p>
+
+            <p>The "molecular shifting" capability — Keth-Sari biological capacity to transition between what recovered archives term "Stone-Self" (dense, crystalline PS configuration) and "Flame-Self" (dispersed, free-streaming plasma configuration) — arises from the modulation of the TMCB field topology. In Stone-Self, the topological flux loops are tightly ordered and mutually reinforcing, maintaining the PS lattice in its near-solid state of maximal structural density and mechanical rigidity. In Flame-Self, the TMCB field topology undergoes a controlled <em>reconnection cascade</em> — a rapid series of magnetic field line reconnection events that fundamentally restructure the confinement geometry from closed-loop toroidal topology to an open-fan or radially dispersed configuration, releasing the PS lattice from tight confinement and allowing it to transiently equilibrate with the ambient plasma environment.</p>
+
+            <p>The biological utility of this dual-state capacity is profound. Stone-Self enables high-precision engineering work, reproduction, information processing, and the physical manipulation of structural materials — activities that require biomechanical rigidity and fine motor control at the scale of PS crystal lattice unit cells (estimated ≈ 10⁻⁹ m effective diameter). Flame-Self enables rapid long-distance locomotion within Thuban's convective flows (speeds up to 0.3 km/s through flux tube highways), camouflage by blending the electromagnetic signature with ambient stellar plasma, and a defensive dispersal state in which physical attack becomes geometrically ineffective. Critically, <em>consciousness and individual identity are preserved through both states</em> — the Keth-Sari neural information architecture appears to be encoded in topological invariants of the magnetic confinement structure rather than in its spatial density, enabling continuity of self across radical physical transformations that no surface-world biology could survive.</p>
+
+            <p>The six distinct Keth-Sari biological genders (detailed in Chapter V and the Registry) each exhibit characteristic variants in their PS morphology and TMCB field topology. The Male gender, for instance, maintains a dominant long-axis dipolar TMCB field geometry optimized for structural load-bearing and directed energy projection. The Connector gender exhibits a unique multi-polar TMCB field topology with six stable field-null points on its body surface — the physical basis for their role as mediators and information relays within the hexagonal family matrix. Each gender's PS body morphology is not merely cosmetic but represents an evolutionary optimization of electromagnetic geometry for their respective ecological and social function within the Keth-Sari civilization's radically differentiated division of reproductive and civic labor.</p>
+
+            <div class="chapter-sidebar-note">
+              <p>Material Note: Prismatic Silicon crystal fragments have theoretically detectable spectroscopic signatures — anomalous Si-IV forbidden line emission at temperatures inconsistent with thermal equilibrium — potentially identifiable via far-UV stellar spectroscopy of Thuban's photospheric absorption profile.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Chapter 4 -->
+        <div class="whitepaper-chapter">
+          <div class="chapter-number">Chapter IV</div>
+          <div class="chapter-title">Magnetospheric Surfing — Propagating Kinetic Energy and Projectiles Along Flux Highways</div>
+          <div class="chapter-body">
+            <p>Transit within the Thuban stellar interior presents engineering challenges of a category entirely unlike those faced by any conventional spacefaring civilization. The stellar interior is not a vacuum but a <em>dense, turbulent magnetofluid</em> with a mean free path of approximately 1 cm at the convective zone base — a medium denser than any planetary atmosphere, traversed by chaotic convective flows, magnetoacoustic shock fronts, and toroidal flux tube structures of immense electromagnetic potency. Conventional propulsion paradigms (chemical, nuclear, or even ion-drive) are physically incoherent in this environment: there is no vacuum for a rocket plume to expand into, and the ambient electromagnetic noise would saturate any guidance system based on conventional radio-frequency signaling. The Keth-Sari solution — the development of <em>Magnetospheric Flux Highways</em> (MFHs) — represents their most sophisticated technological achievement prior to the commencement of the Tharuvan Shell Sequence.</p>
+
+            <p>A Magnetospheric Flux Highway is a artificially stabilized, narrow-bore magnetic flux tube maintained in a state of <em>coherent laminar MHD flow</em> against the natural tendency of stellar flux tubes to kink, fragment, and dissipate via magnetoconvective instability. The engineering of a stable MFH requires continuous active stabilization by networks of <em>Flux Anchor Nodes</em> (FANs) — specialized Keth-Sari engineering organisms (or autonomous PS-matrix constructs) distributed at intervals along the highway route, each continuously injecting precisely calibrated helicity into the tube's magnetic field to counteract the accumulated kinetic helicity of ambient turbulence. The result is a maintained corridor of strongly ordered, near-axisymmetric magnetic field lines along which plasma flows with dramatically reduced turbulent viscosity — effectively a <em>superfluid analog channel</em> through the stellar interior.</p>
+
+            <p>Within established MFH corridors, Keth-Sari travelers (in Flame-Self configuration) can propagate at velocities up to approximately 3–5 km/s — constrained primarily by the tube's Alfvén speed rather than by biological propulsive capacity. For cargo and material transport, the MFH network supports a second class of transit object: <em>Magnetospheric Kinetic Packages</em> (MKPs), compressed PS-matrix cargo containers encased in toroidal magnetic confinement structures that can be accelerated by sequential FANs acting as a linear induction motor, achieving transit speeds up to 15–20 km/s within heavily engineered highway segments. The total MFH network mapped in recovered Keth-Sari archives spans approximately 1.2 × 10⁸ km of total highway length — comparable in cumulative extent, by relative civilization-scale metrics, to the entire surface road network of Earth's mid-21st-century era.</p>
+
+            <p>Transit dynamics within MFH corridors are governed by the <em>magnetosonic dispersion relation</em> modified for the high-density stellar interior plasma: ω² = k²(vA² + cs²) − (k·B)²vA²/B², where vA is the local Alfvén velocity, cs the local sound speed, k the wave vector of the traveler's electromagnetic disturbance, and B the local field vector. In practice, this relation constrains optimal transit angles relative to the flux tube axis to within ±15 degrees of field-aligned propagation, making MFH travel a fundamentally <em>channeled, topology-dependent</em> mode of locomotion rather than the freely omnidirectional travel assumed in surface-world transportation paradigms. Keth-Sari city planning (if the term applies) therefore follows a fundamentally network-graph rather than Euclidean-plane spatial logic, with population centers organized around MFH junction nodes rather than geographic proximity in absolute positional coordinates.</p>
+
+            <p>The most spectacular application of MFH technology is the <em>Interstellar Slingshot Protocol</em> — described in detail in Chapter V — in which specially constructed plasma seed packages are accelerated through a converging MFH topology that achieves progressive field intensification, effectively functioning as a relativistic magnetic rail gun extending from Thuban's interior to beyond its heliopause. Preliminary trajectory analysis of recovered Keth-Sari departure logs suggests that at least 47 confirmed seed launches have been executed over the past 180,000 years, targeting 23 candidate stellar systems within 300 light-years of Thuban, including Vega (25 ly), Fomalhaut (25 ly), and three currently unnamed Class K stars within 18 light-years that appear in Keth-Sari astronomical catalogues under designations translated as "The Patient Hearth," "The Wet Stone," and "The Long Wait."</p>
+
+            <div class="chapter-sidebar-note">
+              <p>Navigation Note: MFH corridor maps recovered from lattice fragments use a coordinate system based on local magnetic helicity density rather than Cartesian position — an entirely alien but internally consistent spatial reference framework.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Chapter 5 -->
+        <div class="whitepaper-chapter">
+          <div class="chapter-number">Chapter V</div>
+          <div class="chapter-title">Interstellar Plasma Knot Seed Compression and Long-Time Dispersion Vectors</div>
+          <div class="chapter-body">
+            <p>The culminating technological expression of Keth-Sari civilization — and, from the perspective of SETI and interstellar communications research, their most cosmologically significant achievement — is the development and deployment of <em>Plasma Knot Seeds</em> (PKS): self-contained, quasi-stable electromagnetic configurations encoding the full biological and cultural information necessary to reconstitute a functional Keth-Sari family matrix within a suitable new stellar host. The PKS program represents the Keth-Sari response to a long-term existential calculus: Thuban, as a Class A white giant with an estimated main-sequence lifetime of approximately 800 million years (compared to Sol's ~10 billion years), will evolve off the main sequence within an estimated 200–300 million years, eventually expanding into a red supergiant and destroying all interior habitable zones. The PKS program is, in the most direct sense, a <em>civilizational continuity protocol</em>.</p>
+
+            <p>A Plasma Knot Seed is a topological soliton solution to the non-linear MHD equations — specifically, a three-dimensional generalization of a Hopf fibration knot embedded in a magnetized plasma medium. The Hopf fibration structure ensures that the PKS maintains topological stability during transit through the interstellar medium (ISM), which, while orders of magnitude less dense than the stellar interior, contains sufficient ionized hydrogen (mean density ≈ 10⁶ m⁻³) to sustain the electromagnetic structure of a properly engineered PKS indefinitely. The biological information encoded within the PKS is not stored in chemical sequences (DNA, proteins) but in the topological linking numbers and twist-writhe decomposition of the nested magnetic flux surfaces within the knot structure — a form of <em>magneto-topological information encoding</em> with a theoretical information density of approximately 10¹² bits per cubic meter at PKS core densities.</p>
+
+            <p>The compression and launch sequence for a PKS is one of the most energetically demanding single operations performed by the Keth-Sari civilization. A standard PKS preparation begins 1,200–1,800 years before launch with the gradual accumulation of a seed plasma volume within a specially constructed <em>Deep Core Compression Vault</em> (DCCV) — a hardened PS-matrix chamber located at a radial position within Thuban's interior selected for maximum available magnetic flux density. Over this preparation period, the seed plasma is subject to progressive magnetic compression following a precisely calibrated helicity-injection protocol, gradually increasing the plasma's internal magnetic energy while maintaining topological coherence. At the moment of launch, the accumulated magnetic energy (estimated 10²⁰ to 10²² Joules) is released in a controlled reconnection event that transforms the DCCV's stored magnetic topology into the PKS's transit configuration and ejects it along the aligned MFH slingshot corridor at approximately 0.003c–0.012c (900 km/s to 3,600 km/s), with higher-grade launches consuming proportionally more preparation energy for proportionally greater exit velocities.</p>
+
+            <p>Transit time modeling for PKS dispersal vectors suggests that the closest documented PKS target — the unnamed K-dwarf system referred to in Keth-Sari archives as "The Patient Hearth," estimated at 14–18 light-years from Thuban — would receive a PKS launched at 0.008c within approximately 1,750 to 2,250 years. Upon arrival, the PKS — whose electromagnetic structure is designed to recognize the characteristic magnetic field topology of a K-dwarf stellar interior — would begin an autonomous <em>stellar interior penetration protocol</em>, using the target star's own convective motions as a braking mechanism to decelerate from transit velocity into the stellar interior. Once embedded, the PKS begins a 50–100 year <em>dormancy activation sequence</em> during which the encoded biological topology is decoded and replicated using locally available plasma material, eventually producing a founding Keth-Sari family matrix capable of long-term survival and expansion in the new stellar environment.</p>
+
+            <p>The long-term dispersal vector analysis performed by Keth-Sari astrophysical archives — notably the document referred to in recovered materials as the <strong>Great Bloom Calculation</strong> — projects that, if PKS launches continue at the documented historical rate of approximately one launch every 3,800 years, the cumulative seeding radius around Thuban will expand at an average rate of approximately 0.7 light-years per century. Within the 200 million years remaining before Thuban's main-sequence termination, the Great Bloom Calculation projects potential Keth-Sari presence in stellar systems spanning a sphere of radius approximately 4,000 light-years centered on Thuban's current position — encompassing an estimated 1.2 million stellar systems and representing, if the seeding process achieves even 0.1% establishment success rate, the foundation of a distributed stellar-interior civilization of approximately 1,200 member stars. The implications of this calculation for our understanding of galactic-scale civilization distribution, biosignature detectability, and the Fermi Paradox are left, for now, without comment in this document.</p>
+
+            <div class="chapter-sidebar-note">
+              <p>Cosmological Note: The Keth-Sari Great Bloom Calculation predates any equivalent human civilization modeling by approximately 1.9 billion years. The document's final line reads, in approximate translation: "We do not build for ourselves. We build for the fire that has not yet learned to burn."</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /whitepaper-panel -->
+
+    </div><!-- /arch-layout -->
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TAB 2 — MAGNETOSPHERIC TRANSIT / FLUX SIMULATOR
+  ═══════════════════════════════════════════════════════ -->
+  <section id="tab-flux" class="tab-panel" role="tabpanel">
+
+    <div class="section-eyebrow">Simulation Module · MFH-SIM v4.7</div>
+    <div class="section-title">Magnetospheric Flux Highway Simulator</div>
+    <div class="section-subtitle">Real-time plasma node trajectory modeling · Thuban interior MHD environment</div>
+
+    <div class="flux-layout">
+
+      <!-- Flux Canvas -->
+      <div class="flux-canvas-wrapper">
+        <canvas id="fluxCanvas"></canvas>
+        <div class="flux-scanline"></div>
+        <div class="flux-corner tl"></div>
+        <div class="flux-corner tr"></div>
+        <div class="flux-corner bl"></div>
+        <div class="flux-corner br"></div>
+      </div>
+
+      <!-- Controls Panel -->
+      <div class="flux-controls-panel">
+
+        <div class="panel">
+          <div class="controls-title">Simulation Parameters</div>
+
+          <div class="control-group" style="margin-bottom:1.2rem;">
+            <div class="control-label">
+              <span>Flux Range</span>
+              <span id="fluxRangeDisplay">50%</span>
+            </div>
+            <input type="range" id="fluxRange" min="1" max="100" value="50" />
+          </div>
+
+          <div class="control-group" style="margin-bottom:1.5rem;">
+            <div class="control-label">
+              <span>Seed Launch Power</span>
+              <span id="seedPowerDisplay">75%</span>
+            </div>
+            <input type="range" id="seedPower" min="10" max="100" value="75" />
+          </div>
+
+          <div class="control-group" style="margin-bottom:1.5rem;">
+            <div class="control-label">
+              <span>Highway Coherence</span>
+              <span id="coherenceDisplay">60%</span>
+            </div>
+            <input type="range" id="coherence" min="10" max="100" value="60" />
+          </div>
+
+          <button class="action-btn" id="btn-compress-seed">
+            ⬡ Compress Interstellar Seed
+          </button>
+        </div>
+
+        <!-- Live Metrics -->
+        <div class="panel">
+          <div class="controls-title">Live Telemetry Metrics</div>
+          <div class="metrics-grid">
+
+            <div class="metric-card">
+              <div class="metric-label">Core Fusion Power</div>
+              <div class="metric-value" id="metric-power">—</div>
+              <div class="metric-unit">GW Drawn</div>
+              <div class="metric-bar"><div class="metric-bar-fill" id="bar-power" style="width:0%"></div></div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">Shell Temperature</div>
+              <div class="metric-value" id="metric-temp">—</div>
+              <div class="metric-unit">Kelvin</div>
+              <div class="metric-bar"><div class="metric-bar-fill" id="bar-temp" style="width:0%"></div></div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">Seed Field Decay</div>
+              <div class="metric-value" id="metric-decay">—</div>
+              <div class="metric-unit">%/AU · yr</div>
+              <div class="metric-bar"><div class="metric-bar-fill" id="bar-decay" style="width:0%"></div></div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-label">Flux Nav Frequency</div>
+              <div class="metric-value" id="metric-freq">—</div>
+              <div class="metric-unit">MHz</div>
+              <div class="metric-bar"><div class="metric-bar-fill" id="bar-freq" style="width:0%"></div></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Seed Log -->
+        <div class="panel">
+          <div class="controls-title">Seed Launch Log</div>
+          <div id="seedLog" style="max-height:160px;overflow-y:auto;font-family:'Raleway',sans-serif;font-size:0.72rem;color:var(--ochre);line-height:2;">
+            <div style="opacity:0.4;font-style:italic;">No launches recorded.</div>
+          </div>
+        </div>
+
+      </div><!-- /flux-controls-panel -->
+
+    </div><!-- /flux-layout -->
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TAB 3 — HEXAGONAL LINEAGE REGISTRY
+  ═══════════════════════════════════════════════════════ -->
+  <section id="tab-registry" class="tab-panel" role="tabpanel">
+
+    <div class="registry-header">
+      <div class="section-eyebrow">Species Registry · Hexagonal Lineage Matrix</div>
+      <div class="section-title">Keth-Sari Gender &amp; Societal Architecture</div>
+      <div class="section-subtitle">Six-gender hexagonal family matrix · Role variables · Inter-family alliance protocols</div>
+    </div>
+
+    <div class="registry-grid">
+
+      <!-- Card 1: The Male -->
+      <div class="reg-card" data-role="male">
+        <div class="card-image-block">
+          <img src="male.jpg" alt="The Male" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">⬡</div>
+            <div class="placeholder-text">Artwork · male.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Gender Role · I</div>
+          <div class="card-title">The Male</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 2: The Connector -->
+      <div class="reg-card" data-role="connector">
+        <div class="card-image-block">
+          <img src="connector.jpg" alt="The Connector" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">⬡</div>
+            <div class="placeholder-text">Artwork · connector.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Gender Role · II</div>
+          <div class="card-title">The Connector</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 3: Female I -->
+      <div class="reg-card" data-role="female1">
+        <div class="card-image-block">
+          <img src="female1.jpg" alt="Female I" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">⬡</div>
+            <div class="placeholder-text">Artwork · female1.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Gender Role · III</div>
+          <div class="card-title">Female I</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 4: Female II -->
+      <div class="reg-card" data-role="female2">
+        <div class="card-image-block">
+          <img src="female2.jpg" alt="Female II" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">⬡</div>
+            <div class="placeholder-text">Artwork · female2.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Gender Role · IV</div>
+          <div class="card-title">Female II</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 5: Female III -->
+      <div class="reg-card" data-role="female3">
+        <div class="card-image-block">
+          <img src="female3.jpg" alt="Female III" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">⬡</div>
+            <div class="placeholder-text">Artwork · female3.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Gender Role · V</div>
+          <div class="card-title">Female III</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 6: The Producer -->
+      <div class="reg-card" data-role="producer">
+        <div class="card-image-block">
+          <img src="producer.jpg" alt="The Producer" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">⬡</div>
+            <div class="placeholder-text">Artwork · producer.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Gender Role · VI</div>
+          <div class="card-title">The Producer</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 7: Attraction Dynamics -->
+      <div class="reg-card" data-role="attraction">
+        <div class="card-image-block">
+          <img src="attraction.jpg" alt="Attraction Dynamics" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">◈</div>
+            <div class="placeholder-text">Artwork · attraction.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Rule Variable · I</div>
+          <div class="card-title">Attraction Dynamics</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 8: Lifespan Variables -->
+      <div class="reg-card" data-role="lifespan">
+        <div class="card-image-block">
+          <img src="lifespan.jpg" alt="Lifespan Variables" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">◈</div>
+            <div class="placeholder-text">Artwork · lifespan.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Rule Variable · II</div>
+          <div class="card-title">Lifespan Variables</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 9: Reproductive Stream Split -->
+      <div class="reg-card" data-role="repro">
+        <div class="card-image-block">
+          <img src="repro.jpg" alt="Reproductive Stream Split" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">◈</div>
+            <div class="placeholder-text">Artwork · repro.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Rule Variable · III</div>
+          <div class="card-title">Reproductive Stream Split</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+      <!-- Card 10: Inter-Family Alliances -->
+      <div class="reg-card" data-role="alliance">
+        <div class="card-image-block">
+          <img src="alliance.jpg" alt="Inter-Family Alliances" />
+          <div class="card-image-placeholder">
+            <div class="placeholder-icon">◈</div>
+            <div class="placeholder-text">Artwork · alliance.jpg</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-role-tag">Rule Variable · IV</div>
+          <div class="card-title">Inter-Family Alliances</div>
+          <div class="card-divider"></div>
+          <div class="card-description">Needs to fill</div>
+        </div>
+      </div>
+
+    </div><!-- /registry-grid -->
+
+  </section>
+
+</div><!-- /app -->
+
+<script src="app.js" defer></script>
+</body>
+</html>
